@@ -22,6 +22,7 @@ namespace ACM.BL
         public string FirstName { get; set; }
 
         private string _lastname;
+
         public string LastName
         {
             get
@@ -67,38 +68,6 @@ namespace ACM.BL
             if (string.IsNullOrWhiteSpace(EmailAdress)) isValid = false;
 
             return isValid;
-        }
-
-        /// <summary>
-        /// Retrieve one Customer by Id
-        /// </summary>
-        /// <param name="CustomerId"></param>
-        /// <returns></returns>
-        public Customer Retrieve(int CustomerId)
-        {
-            // code thats retrieve the defined Customer.
-            return new Customer();
-
-        }
-
-        /// <summary>
-        /// Retrieve all Customers.
-        /// </summary>
-        /// <returns></returns>
-        public List<Customer> Retrieve()
-        {
-            // code that retrieves all of the customers.
-            return new List<Customer>();
-        }
-
-        /// <summary>
-        /// Saves the current Customer.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            // code that saves the defined Customer
-            return true;
         }
 
     }
