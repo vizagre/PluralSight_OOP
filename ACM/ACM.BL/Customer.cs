@@ -41,6 +41,8 @@ namespace ACM.BL
             }
         }
 
+        public override string ToString() => FullName;
+
         public string FullName
         {
             get

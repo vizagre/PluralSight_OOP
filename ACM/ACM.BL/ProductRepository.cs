@@ -24,14 +24,35 @@ namespace ACM.BL
                 product.CurrentPrice = 15.96M;
             }
 
+            object myObject = new object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
             return product;
         }
 
         public bool Save(Product product)
         {
-            // Code that saves the product
+            var success = true;
 
-            return true;
+            if(product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        // call a Insert Stored Procedure
+                    }
+                    else
+                    {
+                        // call a Update Stored Procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }
